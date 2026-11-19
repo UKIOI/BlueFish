@@ -1,0 +1,5 @@
+<resources>
+    <color name="app_surface">@color/app_surface_dark</color>
+    <color name="app_accent">#AFC2FF</color>
+    <bool name="app_light_system_bars">false</bool>
+</resources>

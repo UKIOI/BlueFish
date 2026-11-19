@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; connect-src 'self'; img-src 'self' data:; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta name="theme-color" content="#ffffff">
+  <title>BlueFish</title>
+  <link rel="stylesheet" href="katex/katex.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="markdown-it.js" defer></script>
+  <script src="katex/katex.min.js" defer></script>
+  <script src="math.js" defer></script>
+  <script src="core.js" defer></script>
+  <script src="deepseek-import.js" defer></script>
+  <script src="i18n.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div id="workspace">
+    <div id="app">
+      <header id="bar"></header>
+      <div id="feed-region">
+        <main id="feed"></main>
+      </div>
+      <footer id="dock" data-attachments-open="false">
+        <div id="notice"></div>
+        <div id="composer">
+          <div id="edit-banner" hidden></div>
+          <div id="attachments"></div>
+          <textarea id="draft" rows="2"></textarea>
+          <div id="tools">
+            <div id="compose-modes" class="compose-modes" role="group"></div>
+            <div id="compose-actions" class="tools-actions"></div>
+          </div>
+        </div>
+        <div id="attachment-tray" inert>
+          <div class="attachment-tray-clip">
+            <div id="attachment-panel"></div>
+          </div>
+        </div>
+        <p id="disclaimer"></p>
+      </footer>
+    </div>
+    <main id="screen" hidden></main>
+  </div>
+  <div id="drawer-scrim" aria-hidden="true"></div>
+  <aside id="drawer" role="dialog" aria-modal="true" aria-labelledby="history-title" aria-hidden="true" inert>
+    <div id="drawer-toggle"></div>
+    <div id="drawer-content"></div>
+    <nav id="navigation"></nav>
+    <div id="history-menu" role="menu" hidden></div>
+  </aside>
+  <section id="history-search-screen" role="dialog" aria-modal="true" aria-hidden="true" inert>
+    <header id="history-search-head"></header>
+    <div id="history-search-results" class="scroll screen-content"></div>
+  </section>
+  <div id="settings-screen" hidden></div>
+  <div id="overlay" hidden></div>
+  <div id="toast" role="status" hidden></div>
+</body>
+</html>
